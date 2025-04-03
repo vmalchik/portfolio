@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -13,9 +14,11 @@ export default function ArchiveLayout({
 }>) {
   return (
     <div className="min-h-screen scroll-smooth">
-      <h1>Victor Malchikov</h1>
-      <h2>Software Developer</h2>
-      <p>I work in the cloud and build applications for the web!</p>
+      <Header
+        title="Victor Malchikov"
+        subtitle="Software Developer"
+        description="I work in the cloud and build applications for the web!"
+      />
 
       {/* Internal navigation */}
       <nav>
