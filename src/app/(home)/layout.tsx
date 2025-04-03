@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Profile of Victor Malchikov, a software engineer"
 };
 
-export default function ArchiveLayout({
+export default function HomeLayout({
   children
 }: Readonly<{
   children: React.ReactNode;

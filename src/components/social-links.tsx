@@ -7,32 +7,36 @@ type SocialLink = {
   href: string;
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   label: string;
+  ariaLabel: string;
 };
 
 const links: SocialLink[] = [
   {
     href: "https://github.com/vmalchik/",
     icon: GitHubIcon,
-    label: "GitHub link (opens in new tab)"
+    ariaLabel: "GitHub link (opens in new tab)",
+    label: "GitHub"
   },
   {
     href: "https://www.linkedin.com/in/victor-malchikov/",
     icon: LinkedinIcon,
-    label: "LinkedIn link (opens in new tab)"
+    ariaLabel: "LinkedIn link (opens in new tab)",
+    label: "LinkedIn"
   },
   {
     href: "/resume",
     icon: TieIcon,
-    label: "Resume link (navigates to resume page)"
+    ariaLabel: "Resume link (navigates to resume page)",
+    label: "Resume"
   }
 ];
 
 export const SocialLinks = () => {
   return (
-    <nav arial-label="Social media and resume links" className="">
-      <ul>
+    <nav arial-label="Social media and resume links">
+      <ul className="flex">
         {links.map((link) => (
-          <li key={link.label}>
+          <li key={link.label} className="mr-5">
             <Link
               href={link.href}
               aria-label={link.label}
@@ -40,6 +44,7 @@ export const SocialLinks = () => {
               rel="noopener noreferrer"
             >
               <link.icon aria-hidden="true" className="h-8 w-8" />
+              <span className="sr-only">{link.label}</span>
             </Link>
           </li>
         ))}

@@ -1,3 +1,3 @@
-export default function ArhivePage() {
+export default function ProjectsPage() {
   return <main>Project Archive</main>;
 }

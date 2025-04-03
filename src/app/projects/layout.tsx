@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Archive | Victor Malchikov",
-  description: "Archive of projects worked on by Victor Malchikov"
+  title: "Projects | Victor Malchikov",
+  description: "Projects worked on by Victor Malchikov"
 };
 
-export default function ArchiveLayout({
+export default function ProjectsLayout({
   children
 }: Readonly<{
   children: React.ReactNode;
