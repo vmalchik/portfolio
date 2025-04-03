@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import type { Metadata } from "next";
 import Link from "next/link";
+import SocialLinks from "../../components/social-links";
 
 export const metadata: Metadata = {
   title: "Victor Malchikov",
@@ -36,21 +37,7 @@ export default function ArchiveLayout({
       </nav>
 
       {/* Contact - Social Media & Resume */}
-      <nav>
-        <ul className="space-y-2">
-          <li>
-            <Link href="https://github.com/vmalchik/">GitHub</Link>
-          </li>
-          <li>
-            <Link href="https://www.linkedin.com/in/victor-malchikov/">
-              LinkedIn
-            </Link>
-          </li>
-          <li>
-            <Link href="/resume">Resume</Link>
-          </li>
-        </ul>
-      </nav>
+      <SocialLinks />
       <main>{children}</main>
     </div>
   );
