@@ -39,13 +39,15 @@ export default function ArchiveLayout({
       <nav>
         <ul className="space-y-2">
           <li>
-            <Link href="#about">GitHub</Link>
+            <Link href="https://github.com/vmalchik/">GitHub</Link>
           </li>
           <li>
-            <Link href="#experience">LinkedIn</Link>
+            <Link href="https://www.linkedin.com/in/victor-malchikov/">
+              LinkedIn
+            </Link>
           </li>
           <li>
-            <Link href="#projects">Resume</Link>
+            <Link href="/resume">Resume</Link>
           </li>
         </ul>
       </nav>
