@@ -1,7 +1,7 @@
-import Header from "@/components/header";
+import Header from "@/components/common/header";
+import SocialLinks from "@/components/common/social-links";
+import AnchorMainLinks from "@/components/page/home/anchor-main-links";
 import type { Metadata } from "next";
-import Link from "next/link";
-import SocialLinks from "../../components/social-links";
 
 export const metadata: Metadata = {
   title: "Victor Malchikov",
@@ -22,22 +22,11 @@ export default function HomeLayout({
       />
 
       {/* Internal navigation */}
-      <nav>
-        <ul className="space-y-2">
-          <li>
-            <Link href="#about">About</Link>
-          </li>
-          <li>
-            <Link href="#experience">Experience</Link>
-          </li>
-          <li>
-            <Link href="#projects">Projects</Link>
-          </li>
-        </ul>
-      </nav>
+      <AnchorMainLinks />
 
       {/* Contact - Social Media & Resume */}
       <SocialLinks />
+
       <main>{children}</main>
     </div>
   );

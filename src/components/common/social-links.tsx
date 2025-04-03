@@ -1,7 +1,7 @@
+import GitHubIcon from "@/components/common/icons/github";
+import LinkedinIcon from "@/components/common/icons/linkedin";
+import TieIcon from "@/components/common/icons/tie";
 import Link from "next/link";
-import GitHubIcon from "./icons/github";
-import LinkedinIcon from "./icons/linkedin";
-import TieIcon from "./icons/tie";
 
 type SocialLink = {
   href: string;
