@@ -17,7 +17,7 @@ export default function ArchiveLayout({
       <h2>Software Developer</h2>
       <p>I work in the cloud and build applications for the web!</p>
 
-      {/* Internal navigation using Next.js Link */}
+      {/* Internal navigation */}
       <nav>
         <ul className="space-y-2">
           <li>
@@ -32,6 +32,20 @@ export default function ArchiveLayout({
         </ul>
       </nav>
 
+      {/* Contact - Social Media & Resume */}
+      <nav>
+        <ul className="space-y-2">
+          <li>
+            <Link href="#about">GitHub</Link>
+          </li>
+          <li>
+            <Link href="#experience">LinkedIn</Link>
+          </li>
+          <li>
+            <Link href="#projects">Resume</Link>
+          </li>
+        </ul>
+      </nav>
       <main>{children}</main>
     </div>
   );
