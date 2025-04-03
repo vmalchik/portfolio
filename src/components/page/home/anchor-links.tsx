@@ -10,7 +10,7 @@ export const sections: PageSection[] = [
   { id: "projects" }
 ];
 
-const AnchorMainLinks = () => {
+const MainAnchorLinks = () => {
   return (
     <nav>
       <ul className="space-y-2">
@@ -28,4 +28,4 @@ const AnchorMainLinks = () => {
   );
 };
 
-export default AnchorMainLinks;
+export default MainAnchorLinks;

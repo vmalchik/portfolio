@@ -1,6 +1,6 @@
 import Header from "@/components/common/header";
 import SocialLinks from "@/components/common/social-links";
-import AnchorMainLinks from "@/components/page/home/anchor-main-links";
+import AnchorLinks from "@/components/page/home/anchor-links";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,18 +14,20 @@ export default function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="min-h-screen scroll-smooth">
-      <Header
-        title="Victor Malchikov"
-        subtitle="Software Developer"
-        description="I work in the cloud and build applications for the web!"
-      />
+    <div className="lg:flex lg:gap-4">
+      <div>
+        <Header
+          title="Victor Malchikov"
+          subtitle="Software Developer"
+          description="I work in the cloud and build applications for the web!"
+        />
 
-      {/* Internal navigation */}
-      <AnchorMainLinks />
+        <div className="hidden lg:block">
+          <AnchorLinks />
+        </div>
 
-      {/* Contact - Social Media & Resume */}
-      <SocialLinks />
+        <SocialLinks />
+      </div>
 
       <main>{children}</main>
     </div>
