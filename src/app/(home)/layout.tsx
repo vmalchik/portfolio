@@ -14,8 +14,8 @@ export default function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="lg:flex lg:gap-4">
-      <div>
+    <div className="lg:flex lg:gap-4 lg:min-h-screen">
+      <div className="lg:fixed lg:h-screen lg:w-1/2 bg-blue-200">
         <Header
           title="Victor Malchikov"
           subtitle="Software Developer"
@@ -29,7 +29,9 @@ export default function HomeLayout({
         <SocialLinks />
       </div>
 
-      <main>{children}</main>
+      <main className="w-full lg:ml-[50vw] lg:w-1/2 bg-amber-400 min-h-screen overflow-y-auto">
+        {children}
+      </main>
     </div>
   );
 }
