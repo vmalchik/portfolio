@@ -24,7 +24,7 @@ const links: SocialLink[] = [
     label: "LinkedIn"
   },
   {
-    href: "/resume",
+    href: "/resume.pdf",
     icon: TieIcon,
     ariaLabel: "Resume link (navigates to resume page)",
     label: "Resume"
@@ -42,8 +42,9 @@ export const SocialLinks = () => {
               aria-label={link.label}
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-slate-200 transition-colors duration-100 ease-in-out"
             >
-              <link.icon aria-hidden="true" className="h-8 w-8" />
+              <link.icon aria-hidden="true" className="h-7 w-7" />
               <span className="sr-only">{link.label}</span>
             </Link>
           </li>
