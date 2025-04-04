@@ -23,7 +23,7 @@ export default function HomeLayout({
           description="I work in the cloud and build applications for the web!"
         />
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:block lg:mt-16">
           <AnchorLinks />
         </div>
 
