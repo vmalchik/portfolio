@@ -36,7 +36,7 @@ export const SocialLinks = () => {
     <nav arial-label="Social media and resume links">
       <ul className="flex">
         {links.map((link) => (
-          <li key={link.label} className="mr-5">
+          <li key={link.label} className="mr-6">
             <Link
               href={link.href}
               aria-label={link.label}
