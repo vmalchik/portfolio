@@ -1,14 +1,10 @@
 import Link from "next/link";
 
-type PageSection = {
-  id: string;
-};
-
-export const sections: PageSection[] = [
-  { id: "about" },
-  { id: "experience" },
-  { id: "projects" }
-];
+export enum PageSections {
+  ABOUT = "about",
+  EXPERIENCE = "experience",
+  PROJECTS = "projects"
+}
 
 const AnchorLinks = () => {
   return (
