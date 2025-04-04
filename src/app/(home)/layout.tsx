@@ -14,8 +14,8 @@ export default function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="lg:flex lg:gap-4 lg:min-h-screen">
-      <div className="lg:fixed lg:h-screen lg:w-1/2 bg-blue-200">
+    <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 lg:py-0 lg:flex lg:gap-4">
+      <div className="lg:sticky lg:top-0 lg:flex lg:flex-col lg:max-h-screen lg:w-[48%] lg:pt-24">
         <Header
           title="Victor Malchikov"
           subtitle="Software Developer"
@@ -26,10 +26,13 @@ export default function HomeLayout({
           <AnchorLinks />
         </div>
 
-        <SocialLinks />
+        {/* border-black-800 border-1 */}
+        <div className="lg:flex lg:flex-col lg:flex-1 lg:justify-end lg:pb-12">
+          <SocialLinks />
+        </div>
       </div>
 
-      <main className="w-full lg:ml-[50vw] lg:w-1/2 bg-amber-400 min-h-screen overflow-y-auto">
+      <main className="min-h-screen overflow-y-auto lg:w-[52%] lg:py-24">
         {children}
       </main>
     </div>
