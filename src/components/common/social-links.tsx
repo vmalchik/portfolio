@@ -2,7 +2,7 @@ import GitHubIcon from "@/components/common/icons/github";
 import LinkedinIcon from "@/components/common/icons/linkedin";
 import TieIcon from "@/components/common/icons/tie";
 import YoutubeIcon from "@/components/common/icons/youtube";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils/cn";
 import Link from "next/link";
 
 type SocialLink = {
