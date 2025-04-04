@@ -1,5 +1,5 @@
 import SectionHeader from "@/components/page/home/section-header";
-import { SectionProps } from "./section-types";
+import { SectionProps } from "../section-types";
 
 export const ExperienceSection = ({ id }: SectionProps) => {
   return (

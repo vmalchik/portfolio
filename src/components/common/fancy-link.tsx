@@ -12,7 +12,7 @@ export const FancyLink = ({
     <Link
       target="_blank"
       rel="noopener noreferrer"
-      className={`text-slate-200 hover:text-teal-200 font-medium transition-colors duration-50 ease-in-out ${className}`}
+      className={`text-slate-200 hover:text-teal-300 font-medium transition-colors duration-50 ease-in-out ${className}`}
       {...props}
     >
       {children}
