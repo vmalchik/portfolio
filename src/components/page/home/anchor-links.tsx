@@ -1,11 +1,5 @@
 import Link from "next/link";
 
-export enum PageSections {
-  ABOUT = "about",
-  EXPERIENCE = "experience",
-  PROJECTS = "projects"
-}
-
 const AnchorLinks = () => {
   return (
     <nav>

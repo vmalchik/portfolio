@@ -1,12 +1,9 @@
 import FancyLink from "@/components/common/fancy-link";
-import { PageSections } from "@/components/page/home/anchor-links";
-import SectionHeader from "./section-header";
+import SectionHeader from "@/components/page/home/section-header";
+import { SectionProps } from "@/components/page/home/section-types";
+
 // This file contains the content for the "About" section of the home page.
-// https://www.complytec.com/wp-content/uploads/RSA-Archer-Gartner-Reports.pdf
-// https://patents.google.com/patent/US11122438B2/en?q=(victor+malchikov)&oq=victor+malchikov
-// https://patents.google.com/patent/US20210241192A1/en?q=(victor+malchikov)&oq=victor+malchikov
-// https://patents.google.com/patent/US11023863B2/en?q=(victor+malchikov)&oq=victor+malchikov
-// https://patents.google.com/patent/US20210241231A1/en?q=(victor+malchikov)&oq=victor+malchikov
+// e.g. https://www.complytec.com/wp-content/uploads/RSA-Archer-Gartner-Reports.pdf
 
 export const aboutParagraphs = {
   intro: (
@@ -85,9 +82,9 @@ export const aboutParagraphs = {
   )
 };
 
-export default function About() {
+export default function AboutSection({ id }: SectionProps) {
   return (
-    <section id={PageSections.ABOUT} className="space-y-6">
+    <section id={id} className="space-y-6">
       <SectionHeader>About</SectionHeader>
       {aboutParagraphs.intro}
       {aboutParagraphs.rsa}

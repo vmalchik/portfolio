@@ -1,9 +1,10 @@
-import About from "@/components/page/home/about";
+import AboutSection from "@/components/page/home/about-section";
+import { SectionIds } from "@/components/page/home/section-types";
 
 export default function HomePage() {
   return (
     <main>
-      <About />
+      <AboutSection id={SectionIds.ABOUT} />
     </main>
   );
 }
