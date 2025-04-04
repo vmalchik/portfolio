@@ -19,7 +19,7 @@ export default function HomeLayout({
       <div className="lg:sticky lg:top-0 lg:w-[48%] lg:flex lg:flex-col lg:max-h-screen lg:py-24">
         <Header
           title="Victor Malchikov"
-          subtitle="Software Developer"
+          subtitle="Software Engineer"
           description="I work in the cloud and build applications for the web!"
         />
 
