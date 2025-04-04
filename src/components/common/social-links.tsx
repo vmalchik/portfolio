@@ -14,19 +14,19 @@ const links: SocialLink[] = [
   {
     href: "https://github.com/vmalchik/",
     icon: GitHubIcon,
-    ariaLabel: "GitHub link (opens in new tab)",
+    ariaLabel: "GitHub (opens in new tab)",
     label: "GitHub"
   },
   {
     href: "https://www.linkedin.com/in/victor-malchikov/",
     icon: LinkedinIcon,
-    ariaLabel: "LinkedIn link (opens in new tab)",
+    ariaLabel: "LinkedIn (opens in new tab)",
     label: "LinkedIn"
   },
   {
     href: "/resume.pdf",
     icon: TieIcon,
-    ariaLabel: "Resume link (navigates to resume page)",
+    ariaLabel: "Resume (navigates to resume page)",
     label: "Resume"
   }
 ];
