@@ -11,9 +11,9 @@ export const Header = ({ title, subtitle, description }: HeaderProps) => {
         {title}
       </h1>
       {subtitle && (
-        <h2 className="mt-3 text-lg sm:text-xl font-medium tracking-tight  text-slate-200">
+        <span className="block mt-3 text-lg sm:text-xl font-medium tracking-tight text-slate-200">
           {subtitle}
-        </h2>
+        </span>
       )}
       {description && <p className="mt-4 max-w-xs">{description}</p>}
     </header>
