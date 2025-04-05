@@ -7,7 +7,7 @@ const experience = {
     startDate: "2024"
   },
   title: "Senior Principal Software Engineer",
-  subtitle: "Principal Software Engineer",
+  previousTitle: "Principal Software Engineer",
   company: "RSA",
   companyUrl: "https://www.rsa.com/en-us",
   description:
@@ -37,7 +37,6 @@ const experience2 = {
     startDate: "2024"
   },
   title: "Senior Principal Software Engineer",
-  subtitle: "Principal Software Engineer",
   company: "RSA",
   companyUrl: "https://www.rsa.com/en-us",
   description:
@@ -67,7 +66,7 @@ export const ExperienceSection = ({ id }: SectionProps) => {
     <section id={id}>
       <div className="space-y-6">
         <SectionHeader>Experience</SectionHeader>
-        <div className="space-y-10">
+        <div className="space-y-12">
           <ExperienceCard experience={experience} />
           <ExperienceCard experience={experience2} />
         </div>
