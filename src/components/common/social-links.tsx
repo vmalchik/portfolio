@@ -34,7 +34,7 @@ const links: SocialLink[] = [
     className: "scale-120"
   },
   {
-    href: "/resume.pdf",
+    href: "/documents/resume.pdf",
     icon: TieIcon,
     ariaLabel: "Victor's Resume (navigates to resume page)",
     label: "Resume",

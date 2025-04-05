@@ -49,15 +49,29 @@ export const BaseSectionCard = ({ title, children }: BaseSectionCardProps) => {
     }
   });
   return (
+    // Informational:
+    // Previous attempt to style the card without using multiple columns
+    // <div className="relative group sm:flex sm:gap-12 lg:gap-6 ">
+    // <div className="relative group grid grid-cols-1 sm:grid-cols-[0.3fr_1fr] gap-6 sm:items-start">
+
+    // Details:
     // use group hover to ensure hover is triggered for absolute positioned element
-    <div className="relative group sm:flex sm:gap-12 lg:gap-6 ">
+    // on mobile - stack vertically by having content take up all grid cols and side info take up 3
+    // on desktop - stack horizontally with side info on left (image will dynamically resize and take 2 cols of the card width)
+    <div className="relative group grid grid-cols-8 gap-6 sm:items-start">
       {/* highlight card on-hover with a light custom inset box shadow (a 1px inner top border in light gray-blue) */}
       <span
         aria-hidden="true"
         className="absolute -inset-x-4 -top-3 -bottom-3.5 sm:-inset-y-4.5 pointer-events-none rounded-md group-hover:bg-slate-400/6 group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] transition"
       ></span>
-      {sideInfo}
-      <Card>
+
+      {/* side info */}
+      <div className="col-span-3 sm:col-span-2 order-2 sm:order-none">
+        {sideInfo}
+      </div>
+
+      {/* content */}
+      <Card className="col-span-8 sm:col-span-6 order-1 sm:order-none">
         <CardHeader>
           <CardTitle>
             <FancyLink

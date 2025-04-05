@@ -39,7 +39,7 @@ export const ExperienceCard = ({ experience }: ExperienceItemProps) => {
   } = experience;
 
   const endDateNormalized = endDate ? endDate : "Present";
-  const duration = `${startDate} - ${endDateNormalized}`;
+  const duration = `${startDate}  ${endDateNormalized}`;
   const durationAriaLabel = `Work start date ${duration} to ${endDateNormalized}`;
 
   const cardTitle = {
@@ -50,6 +50,15 @@ export const ExperienceCard = ({ experience }: ExperienceItemProps) => {
     ariaLabel: `Work at ${company}`
   };
 
+  //   <span
+  //   style={{
+  //     display: "inline-block",
+  //     width: "10px",
+  //     height: "1px",
+  //     background: "currentColor",
+  //     verticalAlign: "middle"
+  //   }}
+  // ></span>
   return (
     <BaseSectionCard title={cardTitle}>
       <BaseSectionCardSideInfo>
@@ -57,7 +66,7 @@ export const ExperienceCard = ({ experience }: ExperienceItemProps) => {
           aria-label={durationAriaLabel}
           className="inline-block min-w-fit text-xs font-semibold uppercase tracking-wide text-slate-500 sm:mt-1"
         >
-          {startDate} &ndash; {endDateNormalized}
+          {startDate} &mdash; {endDateNormalized}
         </span>
       </BaseSectionCardSideInfo>
       <BaseSectionCardContent>

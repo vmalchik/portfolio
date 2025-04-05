@@ -1,7 +1,7 @@
 export enum SectionIds {
-  ABOUT = "about",
-  EXPERIENCE = "experience",
-  PROJECTS = "projects"
+  About = "about",
+  Experience = "experience",
+  Projects = "projects"
 }
 
 export type SectionProps = {
