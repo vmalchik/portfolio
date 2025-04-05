@@ -1,6 +1,6 @@
 import BaseSectionCard, {
   BaseSectionCardContent,
-  BaseSectionCardSideInfo
+  BaseSectionCardInfo
 } from "@/components/page/home/base-section-card";
 import TechnologyList from "@/components/page/home/technology-list";
 import { isNonEmptyArray } from "@/lib/utils/array";
@@ -37,16 +37,21 @@ export const ProjectCard = ({ project }: ProjectItemProps) => {
 
   return (
     <BaseSectionCard title={cardTitle}>
-      <BaseSectionCardSideInfo>
-        <Image
-          loading="lazy"
-          src={imageSrc}
-          alt="todo"
-          width={800}
-          height={512}
-          className="w-full h-auto object-cover outline-1 outline-light-gray-900"
-        />
-      </BaseSectionCardSideInfo>
+      <BaseSectionCardInfo position="bottom">
+        <figure>
+          <Image
+            loading="lazy"
+            src={imageSrc}
+            alt="todo"
+            width={800}
+            height={512}
+            className="aspect-video object-cover rounded border border-slate-200/10 transition group-hover:border-slate-200/30 mt-4 sm:mt-0"
+          />
+          <figcaption className="sr-only">
+            Screenshot of the project {cardTitle.main}
+          </figcaption>
+        </figure>
+      </BaseSectionCardInfo>
       <BaseSectionCardContent>
         <div className="space-y-3">
           {description && <p>{description}</p>}

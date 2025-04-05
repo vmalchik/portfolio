@@ -1,6 +1,6 @@
 import BaseSectionCard, {
   BaseSectionCardContent,
-  BaseSectionCardSideInfo
+  BaseSectionCardInfo
 } from "@/components/page/home/base-section-card";
 import WorkProjectsList from "@/components/page/home/experience/work-projects-list";
 import TechnologyList from "@/components/page/home/technology-list";
@@ -50,25 +50,16 @@ export const ExperienceCard = ({ experience }: ExperienceItemProps) => {
     ariaLabel: `Work at ${company}`
   };
 
-  //   <span
-  //   style={{
-  //     display: "inline-block",
-  //     width: "10px",
-  //     height: "1px",
-  //     background: "currentColor",
-  //     verticalAlign: "middle"
-  //   }}
-  // ></span>
   return (
     <BaseSectionCard title={cardTitle}>
-      <BaseSectionCardSideInfo>
+      <BaseSectionCardInfo position="top">
         <span
           aria-label={durationAriaLabel}
           className="inline-block min-w-fit text-xs font-semibold uppercase tracking-wide text-slate-500 sm:mt-1"
         >
           {startDate} &mdash; {endDateNormalized}
         </span>
-      </BaseSectionCardSideInfo>
+      </BaseSectionCardInfo>
       <BaseSectionCardContent>
         <div className="space-y-3">
           {description && <p>{description}</p>}

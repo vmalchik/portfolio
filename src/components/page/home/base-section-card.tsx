@@ -7,6 +7,7 @@ import {
 } from "@/components/common/card";
 import FancyLink from "@/components/common/fancy-link";
 import ArrowOutIcon from "@/components/common/icons/arrow-out";
+import { cn } from "@/lib/utils/cn";
 import React from "react";
 
 export type BaseSectionCardProps = {
@@ -19,14 +20,21 @@ export type BaseSectionCardProps = {
   };
   children: React.ReactNode;
 };
-export const BaseSectionCardSideInfo = ({
-  children
+export const BaseSectionCardInfo = ({
+  children,
+  position = "bottom" // default
 }: {
   children: React.ReactNode;
+  position?: "top" | "bottom";
 }) => {
-  return <>{children}</>;
-};
+  const orderClass = position === "top" ? "order-1" : "order-2";
 
+  return (
+    <div className={cn("col-span-3 sm:col-span-2 sm:order-none", orderClass)}>
+      {children}
+    </div>
+  );
+};
 export const BaseSectionCardContent = ({
   children
 }: {
@@ -42,7 +50,7 @@ export const BaseSectionCard = ({ title, children }: BaseSectionCardProps) => {
   React.Children.forEach(children, (child) => {
     if (!React.isValidElement(child)) return;
 
-    if (child.type === BaseSectionCardSideInfo) {
+    if (child.type === BaseSectionCardInfo) {
       sideInfo = child;
     } else if (child.type === BaseSectionCardContent) {
       content = child;
@@ -58,7 +66,7 @@ export const BaseSectionCard = ({ title, children }: BaseSectionCardProps) => {
     // use group hover to ensure hover is triggered for absolute positioned element
     // on mobile - stack vertically by having content take up all grid cols and side info take up 3
     // on desktop - stack horizontally with side info on left (image will dynamically resize and take 2 cols of the card width)
-    <div className="relative group grid grid-cols-8 gap-6 sm:items-start">
+    <article className="relative group grid grid-cols-8 gap-2 sm:gap-6 sm:items-start">
       {/* highlight card on-hover with a light custom inset box shadow (a 1px inner top border in light gray-blue) */}
       <span
         aria-hidden="true"
@@ -66,9 +74,7 @@ export const BaseSectionCard = ({ title, children }: BaseSectionCardProps) => {
       ></span>
 
       {/* side info */}
-      <div className="col-span-3 sm:col-span-2 order-2 sm:order-none">
-        {sideInfo}
-      </div>
+      {sideInfo}
 
       {/* content */}
       <Card className="col-span-8 sm:col-span-6 order-1 sm:order-none">
@@ -93,7 +99,7 @@ export const BaseSectionCard = ({ title, children }: BaseSectionCardProps) => {
         </CardHeader>
         <CardContent>{content}</CardContent>
       </Card>
-    </div>
+    </article>
   );
 };
 
