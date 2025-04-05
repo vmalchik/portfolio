@@ -2,11 +2,13 @@ import { Badge } from "@/components/common/badge";
 
 export const TechnologyList = ({ list }: { list: string[] }) => {
   return (
-    <div>
+    <ul className="flex flex-wrap gap-2">
       {list.map((item, index) => (
-        <Badge key={`${item}-${index}`}>{item}</Badge>
+        <li key={`${item}-${index}`}>
+          <Badge>{item}</Badge>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

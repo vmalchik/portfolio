@@ -32,9 +32,7 @@ export default function HomeLayout({
         </div>
       </div>
 
-      <main className="lg:w-[52%] overflow-y-auto pt-24 lg:py-24">
-        {children}
-      </main>
+      <main className="lg:w-[52%] pt-24 lg:py-24">{children}</main>
     </div>
   );
 }
