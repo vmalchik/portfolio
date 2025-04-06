@@ -1,3 +1,5 @@
+import { GlobalSpotlight } from "@/components/common/global-spotlight";
+import { cn } from "@/lib/utils/cn";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -17,8 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.className} bg-slate-900 leading-relaxed antialiased text-slate-400 selection:bg-teal-300 selection:text-teal-900`}
+        className={cn(
+          "relative bg-slate-900 leading-relaxed antialiased text-slate-400 selection:bg-teal-300 selection:text-teal-900",
+          inter.className
+        )}
       >
+        <GlobalSpotlight />
         {children}
       </body>
     </html>
