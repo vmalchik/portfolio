@@ -12,7 +12,16 @@ const experience = {
 };
 
 const experience2 = {
-  imageSrc: "",
+  imageSrc: "/projects/wordmuseai.jpg",
+  title: "WordMuseAI",
+  companyUrl: "https://www.rsa.com/en-us",
+  ariaLabel: "p1",
+  description: `As a Senior Principal Engineer at RSA, I led front-end and cloud development across multiple business units, including NetWitness, Archer and SecurID. I helped launch a SaaS risk platform that contributed to RSA's leader recognition in Gartner's Magic Quadrant and filed several patents around risk modeling and access policy automation.`,
+  technologies: []
+};
+
+const experience3 = {
+  imageSrc: "/projects/wordmuseai.jpg",
   title: "WordMuseAI",
   companyUrl: "https://www.rsa.com/en-us",
   ariaLabel: "p1",
@@ -27,7 +36,8 @@ export const ProjectsSection = ({ id }: SectionProps) => {
         <SectionHeader>Projects</SectionHeader>
         <div className="space-y-12">
           <ProjectCard project={experience} />
-          {/* <ProjectCard project={experience2} /> */}
+          <ProjectCard project={experience2} />
+          <ProjectCard project={experience3} />
         </div>
       </div>
     </section>
