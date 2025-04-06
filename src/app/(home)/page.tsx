@@ -5,7 +5,7 @@ import { SectionIds } from "@/components/page/home/section-types";
 
 export default function HomePage() {
   return (
-    <div className="space-y-16 md:space-y-24 lg:space-y-32">
+    <div className="space-y-16 md:space-y-24 lg:space-y-28">
       <AboutSection id={SectionIds.About} />
       <ExperienceSection id={SectionIds.Experience} />
       <ProjectsSection id={SectionIds.Projects} />

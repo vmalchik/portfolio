@@ -2,29 +2,13 @@ import BaseSectionCard, {
   BaseSectionCardContent,
   BaseSectionCardInfo
 } from "@/components/page/home/base-section-card";
+import { Experience } from "@/components/page/home/experience/experience-types";
 import WorkProjectsList from "@/components/page/home/experience/work-projects-list";
 import TechnologyList from "@/components/page/home/technology-list";
 import { isNonEmptyArray } from "@/lib/utils/array";
 
-export type Project = {
-  name: string;
-  url: string;
-  ariaLabel: string;
-};
-
 type ExperienceItemProps = {
-  experience: {
-    duration: {
-      startDate: string;
-      endDate?: string;
-    };
-    title: string;
-    company: string;
-    previousTitle?: string;
-    projects?: Project[];
-    description?: string;
-    technologies?: string[];
-  };
+  experience: Experience;
 };
 
 export const ExperienceCard = ({ experience }: ExperienceItemProps) => {
@@ -32,6 +16,7 @@ export const ExperienceCard = ({ experience }: ExperienceItemProps) => {
     duration: { startDate, endDate },
     title,
     company,
+    url,
     previousTitle,
     description,
     projects,
@@ -40,14 +25,14 @@ export const ExperienceCard = ({ experience }: ExperienceItemProps) => {
 
   const endDateNormalized = endDate ? endDate : "Present";
   const duration = `${startDate}  ${endDateNormalized}`;
-  const durationAriaLabel = `Work start date ${duration} to ${endDateNormalized}`;
+  const durationAriaLabel = `Employed from ${duration} to ${endDateNormalized}`;
 
   const cardTitle = {
     main: title,
     detail: company,
     description: previousTitle || "",
-    url: "",
-    ariaLabel: `Work at ${company}`
+    url,
+    ariaLabel: `Historical employment at ${company}`
   };
 
   return (
@@ -61,7 +46,7 @@ export const ExperienceCard = ({ experience }: ExperienceItemProps) => {
         </span>
       </BaseSectionCardInfo>
       <BaseSectionCardContent>
-        <div className="space-y-3">
+        <div className="space-y-4">
           {description && <p>{description}</p>}
           {isNonEmptyArray(projects) && (
             <WorkProjectsList projects={projects} />

@@ -1,6 +1,6 @@
 import FancyLink from "@/components/common/fancy-link";
 import LinkIcon from "@/components/common/icons/link";
-import { Project } from "@/components/page/home/experience/experience-card";
+import { Project } from "@/components/page/home/experience/experience-types";
 
 type WorkProjectsListProps = {
   projects: Project[];

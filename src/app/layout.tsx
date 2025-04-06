@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className={cn(
-          "relative bg-slate-900 leading-relaxed antialiased text-slate-400 selection:bg-teal-300 selection:text-teal-900",
+          "relative bg-slate-900 leading-relaxed antialiased text-slate-400 selection:bg-teal-300/90 selection:text-teal-900",
           inter.className
         )}
       >

@@ -19,8 +19,7 @@ export const Section = ({
   id: string;
 }) => {
   return (
-    // mb-16
-    <section id={id} className="space-y-6 scroll-mt-24 ">
+    <section id={id} className="space-y-6 scroll-mt-24">
       {children}
     </section>
   );
