@@ -1,5 +1,5 @@
 import ProjectCard from "@/components/page/home/projects/project-card";
-import SectionHeader from "@/components/page/home/section-header";
+import Section, { SectionHeader } from "@/components/page/home/section";
 import { SectionProps } from "@/components/page/home/section-types";
 
 const experience = {
@@ -31,16 +31,14 @@ const experience3 = {
 
 export const ProjectsSection = ({ id }: SectionProps) => {
   return (
-    <section id={id}>
-      <div className="space-y-6">
-        <SectionHeader>Projects</SectionHeader>
-        <div className="space-y-12">
-          <ProjectCard project={experience} />
-          <ProjectCard project={experience2} />
-          <ProjectCard project={experience3} />
-        </div>
+    <Section id={id}>
+      <SectionHeader>Projects</SectionHeader>
+      <div className="space-y-12">
+        <ProjectCard project={experience} />
+        <ProjectCard project={experience2} />
+        <ProjectCard project={experience3} />
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -1,5 +1,5 @@
 import ExperienceCard from "@/components/page/home/experience/experience-card";
-import SectionHeader from "@/components/page/home/section-header";
+import Section, { SectionHeader } from "@/components/page/home/section";
 import { SectionProps } from "@/components/page/home/section-types";
 
 const experience = {
@@ -63,14 +63,12 @@ const experience2 = {
 
 export const ExperienceSection = ({ id }: SectionProps) => {
   return (
-    <section id={id}>
-      <div className="space-y-6">
-        <SectionHeader>Experience</SectionHeader>
-        <div className="space-y-12">
-          <ExperienceCard experience={experience} />
-          <ExperienceCard experience={experience2} />
-        </div>
+    <Section id={id}>
+      <SectionHeader>Experience</SectionHeader>
+      <div className="space-y-12">
+        <ExperienceCard experience={experience} />
+        <ExperienceCard experience={experience2} />
       </div>
-    </section>
+    </Section>
   );
 };

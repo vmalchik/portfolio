@@ -10,4 +10,20 @@ export const SectionHeader = ({ children }: { children: React.ReactNode }) => {
     </div>
   );
 };
-export default SectionHeader;
+
+export const Section = ({
+  children,
+  id
+}: {
+  children: React.ReactNode;
+  id: string;
+}) => {
+  return (
+    // mb-16
+    <section id={id} className="space-y-6 scroll-mt-24 ">
+      {children}
+    </section>
+  );
+};
+
+export default Section;

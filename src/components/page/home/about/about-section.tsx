@@ -1,5 +1,5 @@
 import FancyLink from "@/components/common/fancy-link";
-import SectionHeader from "@/components/page/home/section-header";
+import Section, { SectionHeader } from "@/components/page/home/section";
 import { SectionProps } from "@/components/page/home/section-types";
 
 // This file contains the content for the "About" section of the home page.
@@ -84,12 +84,12 @@ export const aboutParagraphs = {
 
 export default function AboutSection({ id }: SectionProps) {
   return (
-    <section id={id} className="space-y-6">
+    <Section id={id}>
       <SectionHeader>About</SectionHeader>
       {aboutParagraphs.intro}
       {aboutParagraphs.rsa}
       {aboutParagraphs.startups}
       {aboutParagraphs.personal}
-    </section>
+    </Section>
   );
 }
