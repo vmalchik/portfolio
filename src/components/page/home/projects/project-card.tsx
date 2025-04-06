@@ -42,7 +42,7 @@ export const ProjectCard = ({ project }: ProjectItemProps) => {
           <Image
             loading="lazy"
             src={imageSrc}
-            alt="todo"
+            alt={ariaLabel}
             width={800}
             height={512}
             className="aspect-video object-cover rounded border border-slate-200/10 transition group-hover:border-slate-200/30 mt-4 sm:mt-0"
