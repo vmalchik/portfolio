@@ -9,7 +9,7 @@ export const experience: Experience = {
   company: "Genify",
   url: "https://www.ftdsolutions.net/",
   description:
-    "Founding engineer at a four-person startup building a workflow platform for industrial water and energy consulting. Led front-end architecture from MVP to acquisition, developing a reusable, component-driven framework and core features including authentication, workflow logic, registration, and user roles.",
+    "Founding engineer at a four-person startup building a workflow platform for industrial water and energy consulting. Led front-end architecture from MVP to acquisition, creating a reusable component framework and core features like authentication, workflow logic, registration, and role management.",
   projects: [],
   technologies: [
     Technologies.React,
