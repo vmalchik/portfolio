@@ -16,6 +16,7 @@ export const ExperienceSection = ({ id }: SectionProps) => {
           />
         ))}
         <FancyLink
+          noWrap
           showArrow
           href="/documents/resume.pdf"
           aria-label="Victor's Resume"

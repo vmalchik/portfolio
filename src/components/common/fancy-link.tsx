@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 
 export type FancyLinkProps = ComponentProps<typeof Link> & {
+  noWrap?: boolean;
   highlightOnGroupHover?: boolean;
   showArrow?: boolean;
   children: ReactNode;
@@ -12,6 +13,7 @@ export type FancyLinkProps = ComponentProps<typeof Link> & {
 export const FancyLink = ({
   children,
   className = "",
+  noWrap = false,
   highlightOnGroupHover = false,
   showArrow = false,
   ...props
@@ -29,7 +31,12 @@ export const FancyLink = ({
       )}
       {...props}
     >
-      <span className="group inline-flex items-center gap-2 whitespace-nowrap">
+      <span
+        className={cn(
+          "group",
+          noWrap ? "inline-flex items-center gap-2 whitespace-nowrap" : ""
+        )}
+      >
         {children}
         {/* Move the arrow on hover to signal outbound link (quick start, smooth finish) */}
         {showArrow && (

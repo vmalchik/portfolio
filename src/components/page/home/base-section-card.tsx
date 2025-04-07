@@ -83,6 +83,7 @@ export const BaseSectionCard = ({ title, children }: BaseSectionCardProps) => {
             <h3>
               {title.url ? (
                 <FancyLink
+                  noWrap
                   showArrow
                   highlightOnGroupHover
                   href={title.url}

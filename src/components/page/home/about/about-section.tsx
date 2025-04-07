@@ -59,7 +59,7 @@ export const aboutParagraphs = {
       </FancyLink>
       . Additionally, I enjoy exploring new technologies through passion
       projects like{" "}
-      <FancyLink href="https://www.wordmuseai.com/" aria-label="WordMuseAI">
+      <FancyLink href="https://www.wordmuseai.com/" aria-label="WordMuse AI">
         WordMuse AI
       </FancyLink>
       , where I trained a custom OpenAI model to help users write thoughtful
@@ -68,9 +68,14 @@ export const aboutParagraphs = {
   ),
   personal: (
     <p>
-      In my free time, I&apos;m usually hiking, learning new tech, exploring
-      educational content creation, or taking care of my two birds — Blue and
-      Einstein.
+      In my free time, I&apos;m usually hiking, learning new tech,{" "}
+      <FancyLink
+        href="https://www.youtube.com/@victormalchikov/videos"
+        aria-label="Victor's YouTube channel"
+      >
+        exploring educational content creation
+      </FancyLink>
+      , or taking care of my two birds — Blue and Einstein.
     </p>
   )
 };

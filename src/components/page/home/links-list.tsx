@@ -17,6 +17,7 @@ export const LinksList = ({ links }: LinksListProps) => {
       {links.map((link) => (
         <li key={link.name}>
           <FancyLink
+            noWrap
             href={link.url}
             aria-label={link.ariaLabel}
             className="flex flex-nowrap gap-1 items-center text-sm font-normal"
