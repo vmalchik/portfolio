@@ -68,8 +68,9 @@ export const aboutParagraphs = {
   ),
   personal: (
     <p>
-      In my free time, I&apos;m usually out hiking, exploring educational
-      content creation, or taking care of my two birds — Blue and Einstein.
+      In my free time, I&apos;m usually hiking, learning new tech, exploring
+      educational content creation, or taking care of my two birds — Blue and
+      Einstein.
     </p>
   )
 };
