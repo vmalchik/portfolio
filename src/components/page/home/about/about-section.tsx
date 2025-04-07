@@ -21,7 +21,7 @@ export const aboutParagraphs = {
       <FancyLink href="https://www.rsa.com/" aria-label="RSA Security">
         RSA
       </FancyLink>
-      I led front-end and cloud development across NetWitness, Archer and
+      , I led front-end and cloud development across NetWitness, Archer and
       SecurID business units. I helped launch a{" "}
       <FancyLink
         href="https://www.archerirm.com/archer-engage-for-vendors"
