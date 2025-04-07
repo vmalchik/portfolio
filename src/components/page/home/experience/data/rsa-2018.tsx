@@ -26,7 +26,7 @@ export const experienceRSA2018: Experience = {
       ariaLabel: "NetWitness Insight product"
     },
     {
-      name: "Filed Patents",
+      name: "Patents",
       url: "https://patents.google.com/?q=(victor+malchikov)",
       ariaLabel: "Patents by Victor Malchikov"
     }
