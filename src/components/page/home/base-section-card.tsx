@@ -6,7 +6,6 @@ import {
   CardTitle
 } from "@/components/common/card";
 import FancyLink from "@/components/common/fancy-link";
-import ArrowOutIcon from "@/components/common/icons/arrow-out";
 import { cn } from "@/lib/utils/cn";
 import React from "react";
 
@@ -82,14 +81,13 @@ export const BaseSectionCard = ({ title, children }: BaseSectionCardProps) => {
           <CardTitle>
             <h3>
               <FancyLink
+                showArrow
                 highlightOnGroupHover
                 href={title.url}
                 aria-label={title.ariaLabel}
               >
                 <span className="flex items-center gap-2 nowrap whitespace-nowrap">
                   {title.main} {title?.detail && <>&middot; {title.detail}</>}
-                  {/* Move the arrow on hover to signal outbound link (quick start, smooth finish) */}
-                  <ArrowOutIcon className="mb-0.5 flex-shrink-0 transition-transform duration-200 ease-out group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </span>
               </FancyLink>
             </h3>
