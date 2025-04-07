@@ -1,10 +1,5 @@
+import { LinkDetails } from "@/components/page/home/links-list";
 import Technologies from "@/lib/types/technologies";
-
-export type Project = {
-  name: string;
-  url: string;
-  ariaLabel: string;
-};
 
 export type Experience = {
   duration: {
@@ -15,7 +10,7 @@ export type Experience = {
   company: string;
   url: string;
   previousTitle?: string;
-  projects?: Project[];
+  projects?: LinkDetails[];
   description: string;
   technologies?: Technologies[];
 };

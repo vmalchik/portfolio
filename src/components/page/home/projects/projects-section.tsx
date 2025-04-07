@@ -36,6 +36,7 @@ const project: Project = {
   },
   title: "WordMuseAI",
   website: {
+    name: "WordMuseAI",
     url: "https://wordmuse.ai",
     ariaLabel: "WordMuseAI"
   },

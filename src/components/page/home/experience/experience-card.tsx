@@ -3,7 +3,7 @@ import BaseSectionCard, {
   BaseSectionCardInfo
 } from "@/components/page/home/base-section-card";
 import { Experience } from "@/components/page/home/experience/experience-types";
-import WorkProjectsList from "@/components/page/home/experience/work-projects-list";
+import LinksList from "@/components/page/home/links-list";
 import TechnologyList from "@/components/page/home/technology-list";
 import { isNonEmptyArray } from "@/lib/utils/array";
 
@@ -48,9 +48,7 @@ export const ExperienceCard = ({ experience }: ExperienceItemProps) => {
       <BaseSectionCardContent>
         <div className="space-y-4">
           {description && <p>{description}</p>}
-          {isNonEmptyArray(projects) && (
-            <WorkProjectsList projects={projects} />
-          )}
+          {isNonEmptyArray(projects) && <LinksList links={projects} />}
           {isNonEmptyArray(technologies) && (
             <TechnologyList list={technologies} />
           )}
