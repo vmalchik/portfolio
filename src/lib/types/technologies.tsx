@@ -15,7 +15,12 @@ export enum Technologies {
   AWS = "AWS",
   ApacheSpark = "Spark",
   Android = "Android",
-  OpenAI = "OpenAI"
+  OpenAI = "OpenAI",
+  Rest = "RESTful API",
+  TailwindCSS = "Tailwind CSS",
+  Stripe = "Stripe",
+  Prisma = "Prisma",
+  PostgreSQL = "PostgreSQL"
 }
 
 export default Technologies;
