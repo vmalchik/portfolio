@@ -1,6 +1,7 @@
 import { Experience } from "@/components/page/home/experience/experience-types";
 import Technologies from "@/lib/types/technologies";
-export const experience: Experience = {
+
+export const experienceRSA2018: Experience = {
   duration: {
     startDate: "2018",
     endDate: "Mar 2025"
@@ -50,4 +51,4 @@ export const experience: Experience = {
   ]
 };
 
-export default experience;
+export default experienceRSA2018;

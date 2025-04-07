@@ -1,6 +1,6 @@
 import { Experience } from "@/components/page/home/experience/experience-types";
 import Technologies from "@/lib/types/technologies";
-export const experience: Experience = {
+export const experienceGenify: Experience = {
   duration: {
     startDate: "2020",
     endDate: "Apr 2022"
@@ -20,4 +20,4 @@ export const experience: Experience = {
   ]
 };
 
-export default experience;
+export default experienceGenify;

@@ -6,7 +6,7 @@ export const experienceAirPR: Experience = {
     startDate: "2017",
     endDate: "Jan 2018"
   },
-  title: "Senior Software Developer",
+  title: "Senior Software Engineer",
   company: "AirPR (Onclusive)",
   url: "https://onclusive.com/",
   description:
