@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils/cn";
 import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 
-type FancyLinkProps = ComponentProps<typeof Link> & {
+export type FancyLinkProps = ComponentProps<typeof Link> & {
   highlightOnGroupHover?: boolean;
   showArrow?: boolean;
   children: ReactNode;
