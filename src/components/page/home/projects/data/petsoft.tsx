@@ -10,7 +10,7 @@ const petsoft: Project = {
   },
   title: "Petsoft",
   website: {
-    name: "Petsoft",
+    name: "Petsoft website",
     url: "https://petsoft-one.vercel.app/",
     ariaLabel: "Petsoft website"
   },

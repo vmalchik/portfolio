@@ -10,13 +10,13 @@ const eventFinder: Project = {
   },
   title: "Event Finder",
   website: {
-    name: "GitHub - Event Finder",
+    name: "Event Finder website",
     url: "https://event-finder-coral.vercel.app/",
     ariaLabel: "Event Finder website"
   },
   github: {
     name: "GitHub",
-    url: "https://github.com/vmalchik/petsoft",
+    url: "https://github.com/vmalchik/event-finder",
     ariaLabel: "Event Finder Github repository"
   },
   youtube: {
