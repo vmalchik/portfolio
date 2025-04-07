@@ -17,26 +17,26 @@ const links: SocialLink[] = [
   {
     href: "https://github.com/vmalchik/",
     icon: GitHubIcon,
-    ariaLabel: "Victor's GitHub account (opens in new tab)",
+    ariaLabel: "Victor's GitHub account",
     label: "GitHub"
   },
   {
     href: "https://www.linkedin.com/in/victor-malchikov/",
     icon: LinkedinIcon,
-    ariaLabel: "Victor's LinkedIn profile (opens in new tab)",
+    ariaLabel: "Victor's LinkedIn profile",
     label: "LinkedIn"
   },
   {
     href: "https://www.youtube.com/@victormalchikov/videos",
     icon: YoutubeIcon,
-    ariaLabel: "Victor's Youtube channel (opens in new tab)",
+    ariaLabel: "Victor's Youtube channel",
     label: "Youtube",
     className: "scale-120"
   },
   {
     href: "/documents/resume.pdf",
     icon: TieIcon,
-    ariaLabel: "Victor's Resume (navigates to resume page)",
+    ariaLabel: "Victor's Resume",
     label: "Resume",
     className: "scale-110"
   }
@@ -50,7 +50,7 @@ export const SocialLinks = () => {
           <li key={link.label} className="mr-6">
             <Link
               href={link.href}
-              aria-label={link.label}
+              aria-label={link.ariaLabel}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-slate-200 transition-colors duration-100 ease-in-out"

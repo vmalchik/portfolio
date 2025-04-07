@@ -29,10 +29,7 @@ export const aboutParagraphs = {
   rsa: (
     <p>
       As a Senior Principal Engineer at{" "}
-      <FancyLink
-        href="https://www.rsa.com/"
-        aria-label="RSA Security (opens in new tab)"
-      >
+      <FancyLink href="https://www.rsa.com/" aria-label="RSA Security">
         RSA
       </FancyLink>
       {/* , I led front-end and cloud development across multiple business units, */}
@@ -41,7 +38,7 @@ export const aboutParagraphs = {
       SecurID business units. I helped launch a{" "}
       <FancyLink
         href="https://www.archerirm.com/archer-engage-for-vendors"
-        aria-label="Archer Vendor Portal product (opens in new tab)"
+        aria-label="Archer Vendor Portal product"
       >
         SaaS risk platform
       </FancyLink>{" "}
@@ -49,7 +46,7 @@ export const aboutParagraphs = {
       earning{" "}
       <FancyLink
         href="https://www.archerirm.community/s/blogs/rsa-named-a-leader-in-2020-gartner-magic-quadrant-for-it-vendor-risk-management-MCWZPJKWOQVZE5ZA3ZYQMWGHIKQU"
-        aria-label="Archer Gartner Magic Quadrant leader recognition (opens in new tab)"
+        aria-label="Archer Gartner Magic Quadrant leader recognition"
       >
         leader recognition
       </FancyLink>{" "}
@@ -73,7 +70,7 @@ export const aboutParagraphs = {
       through{" "}
       <FancyLink
         href="https://www.ftdsolutions.net/"
-        aria-label="FTD Solutions (opens in new tab)"
+        aria-label="FTD Solutions"
       >
         acquisition by FTD Solutions
       </FancyLink>
@@ -81,10 +78,7 @@ export const aboutParagraphs = {
       like{" "} */}
       . Additionally, I enjoy exploring new technologies through passion
       projects like{" "}
-      <FancyLink
-        href="https://www.wordmuseai.com/"
-        aria-label="WordMuseAI (opens in new tab)"
-      >
+      <FancyLink href="https://www.wordmuseai.com/" aria-label="WordMuseAI">
         WordMuse AI
       </FancyLink>
       , where I trained a custom OpenAI model to help users write thoughtful

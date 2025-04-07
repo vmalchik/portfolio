@@ -29,7 +29,7 @@ export const FancyLink = ({
       )}
       {...props}
     >
-      <span className="inline-flex items-center gap-2 whitespace-nowrap">
+      <span className="group inline-flex items-center gap-2 whitespace-nowrap">
         {children}
         {/* Move the arrow on hover to signal outbound link (quick start, smooth finish) */}
         {showArrow && (

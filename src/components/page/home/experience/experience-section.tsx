@@ -1,3 +1,4 @@
+import FancyLink from "@/components/common/fancy-link";
 import experience from "@/components/page/home/experience/data/experience-data";
 import ExperienceCard from "@/components/page/home/experience/experience-card";
 import Section, { SectionHeader } from "@/components/page/home/section";
@@ -14,6 +15,13 @@ export const ExperienceSection = ({ id }: SectionProps) => {
             experience={exp}
           />
         ))}
+        <FancyLink
+          showArrow
+          href="/documents/resume.pdf"
+          aria-label="Victor's Resume"
+        >
+          View Full Résumé
+        </FancyLink>
       </div>
     </Section>
   );
