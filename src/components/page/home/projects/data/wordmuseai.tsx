@@ -11,7 +11,7 @@ const wordMuseAi: Project = {
   title: "WordMuse AI",
   website: {
     name: "WordMuse AI website",
-    url: "https://wordmuse.ai",
+    url: "https://wordmuseai.com/",
     ariaLabel: "WordMuse AI"
   },
   description: `Built a full-stack serverless app to help users craft messages. Trained a custom OpenAI model on 400 custom prompts and improved UX through user testing and iteration.`,
