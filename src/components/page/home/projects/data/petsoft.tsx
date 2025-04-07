@@ -24,7 +24,7 @@ const petsoft: Project = {
     url: "https://www.youtube.com/watch?v=toDKzAJwT1s",
     ariaLabel: "Petsoft YouTube demo video"
   },
-  description: `Developed and deployed a full-stack pet management web app for a course project. 
+  description: `Full-stack pet management web app for a course project. 
     PetSoft offers virtual daycare tools including pet check-in/out, detailed pet records, and personalized care notes.`,
   technologies: [
     Technologies.NextJS,

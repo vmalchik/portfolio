@@ -14,7 +14,7 @@ const wordMuseAi: Project = {
     url: "https://wordmuse.ai",
     ariaLabel: "WordMuseAI"
   },
-  description: `Designed and deployed a full-stack serverless app to help users craft messages. Trained a custom OpenAI model on 400 custom prompts and improved UX through user testing and iteration.`,
+  description: `Built a full-stack serverless app to help users craft messages. Trained a custom OpenAI model on 400 custom prompts and improved UX through user testing and iteration.`,
   technologies: [
     Technologies.NextJS,
     Technologies.React,

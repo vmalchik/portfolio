@@ -8,8 +8,8 @@ export const ProjectsSection = ({ id }: SectionProps) => {
     <Section id={id}>
       <SectionHeader>Projects</SectionHeader>
       <div className="space-y-12">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
         ))}
       </div>
     </Section>
