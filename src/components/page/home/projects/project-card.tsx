@@ -3,35 +3,49 @@ import BaseSectionCard, {
   BaseSectionCardInfo
 } from "@/components/page/home/base-section-card";
 import TechnologyList from "@/components/page/home/technology-list";
+import Technologies from "@/lib/types/technologies";
 import { isNonEmptyArray } from "@/lib/utils/array";
 import Image from "next/image";
 
-export type Project = {
-  name: string;
+export type Url = {
   url: string;
   ariaLabel: string;
 };
 
-type ProjectItemProps = {
-  project: {
-    imageSrc: string;
-    title: string;
-    companyUrl: string;
-    ariaLabel: string;
-    description: string;
-    technologies: string[];
+export type Project = {
+  image: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
   };
+  title: string;
+  website?: Url;
+  github?: Url;
+  youtube?: Url;
+  description: string;
+  technologies: Technologies[];
+};
+
+type ProjectItemProps = {
+  project: Project;
 };
 
 export const ProjectCard = ({ project }: ProjectItemProps) => {
-  const { imageSrc, title, companyUrl, ariaLabel, description, technologies } =
-    project;
+  const {
+    image: { src, alt, width, height },
+    title,
+    website,
+    github,
+    youtube,
+    description,
+    technologies
+  } = project;
 
   const cardTitle = {
     main: title,
-    detail: "detail",
-    description: "description",
-    url: companyUrl,
+    description: description,
+    url: website || github || undefined,
     ariaLabel: `todo`
   };
 
@@ -41,11 +55,12 @@ export const ProjectCard = ({ project }: ProjectItemProps) => {
         <figure>
           <Image
             loading="lazy"
-            src={imageSrc}
-            alt={ariaLabel}
-            width={800}
-            height={512}
-            className="aspect-video object-cover rounded border border-slate-200/10 transition group-hover:border-slate-200/30 mt-4 sm:mt-0"
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            className="aspect-video object-cover rounded border border-slate-900 mt-4 sm:mt-0"
+            // className="aspect-video object-cover rounded border border-slate-200/10 transition group-hover:border-slate-200/30 mt-4 sm:mt-0"
           />
           <figcaption className="sr-only">
             Screenshot of the project {cardTitle.main}

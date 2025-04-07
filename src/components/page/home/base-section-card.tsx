@@ -12,10 +12,10 @@ import React from "react";
 export type BaseSectionCardProps = {
   title: {
     main: string;
-    detail: string;
+    detail?: string;
     description: string;
-    url: string;
-    ariaLabel: string;
+    url?: string;
+    ariaLabel?: string;
   };
   children: React.ReactNode;
 };
@@ -80,16 +80,20 @@ export const BaseSectionCard = ({ title, children }: BaseSectionCardProps) => {
         <CardHeader>
           <CardTitle>
             <h3>
-              <FancyLink
-                showArrow
-                highlightOnGroupHover
-                href={title.url}
-                aria-label={title.ariaLabel}
-              >
-                <span className="flex items-center gap-2 nowrap whitespace-nowrap">
-                  {title.main} {title?.detail && <>&middot; {title.detail}</>}
-                </span>
-              </FancyLink>
+              {title.url ? (
+                <FancyLink
+                  showArrow
+                  highlightOnGroupHover
+                  href={title.url}
+                  aria-label={title.ariaLabel ? title.ariaLabel : ""}
+                >
+                  <span className="flex items-center gap-2 nowrap whitespace-nowrap">
+                    {title.main} {title?.detail && <>&middot; {title.detail}</>}
+                  </span>
+                </FancyLink>
+              ) : (
+                title.main
+              )}
             </h3>
           </CardTitle>
           {/* Instruct screen readers to ignore processing previous job titles */}
