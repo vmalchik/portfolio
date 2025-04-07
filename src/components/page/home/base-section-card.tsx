@@ -9,14 +9,15 @@ import FancyLink from "@/components/common/fancy-link";
 import { cn } from "@/lib/utils/cn";
 import React from "react";
 
+export type CardTitle = {
+  main: string;
+  detail?: string;
+  subtitle?: string;
+  url?: string;
+  ariaLabel?: string;
+};
 export type BaseSectionCardProps = {
-  title: {
-    main: string;
-    detail?: string;
-    description: string;
-    url?: string;
-    ariaLabel?: string;
-  };
+  title: CardTitle;
   children: React.ReactNode;
 };
 export const BaseSectionCardInfo = ({
@@ -96,10 +97,11 @@ export const BaseSectionCard = ({ title, children }: BaseSectionCardProps) => {
               )}
             </h3>
           </CardTitle>
-          {/* Instruct screen readers to ignore processing previous job titles */}
-          <CardDescription aria-hidden="true">
-            {title.description}
-          </CardDescription>
+          {title.subtitle && (
+            <CardDescription aria-hidden="true">
+              {title.subtitle}
+            </CardDescription>
+          )}
         </CardHeader>
         <CardContent>{content}</CardContent>
       </Card>

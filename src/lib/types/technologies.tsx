@@ -14,7 +14,8 @@ export enum Technologies {
   TypeScript = "TypeScript",
   AWS = "AWS",
   ApacheSpark = "Spark",
-  Android = "Android"
+  Android = "Android",
+  OpenAI = "OpenAI"
 }
 
 export default Technologies;

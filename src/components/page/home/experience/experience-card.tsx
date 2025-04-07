@@ -30,9 +30,10 @@ export const ExperienceCard = ({ experience }: ExperienceItemProps) => {
   const cardTitle = {
     main: title,
     detail: company,
-    description: previousTitle || "",
+    subtitle: previousTitle,
     url,
-    ariaLabel: `Historical employment at ${company}`
+    ariaLabel: `Historical employment at ${company}`,
+    foo: "foo"
   };
 
   return (
