@@ -80,17 +80,19 @@ export const BaseSectionCard = ({ title, children }: BaseSectionCardProps) => {
       <Card className="col-span-8 sm:col-span-6 order-1 sm:order-none">
         <CardHeader>
           <CardTitle>
-            <FancyLink
-              highlightOnGroupHover
-              href={title.url}
-              aria-label={title.ariaLabel}
-            >
-              <h3 className="flex items-center gap-2">
-                {title.main} {title?.detail && <>&middot; {title.detail} </>}
-                {/* Move the arrow on hover to signal outbound link (quick start, smooth finish) */}
-                <ArrowOutIcon className="mb-0.5 transition-transform duration-200 ease-out group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </h3>
-            </FancyLink>
+            <h3>
+              <FancyLink
+                highlightOnGroupHover
+                href={title.url}
+                aria-label={title.ariaLabel}
+              >
+                <span className="flex items-center gap-2 nowrap whitespace-nowrap">
+                  {title.main} {title?.detail && <>&middot; {title.detail}</>}
+                  {/* Move the arrow on hover to signal outbound link (quick start, smooth finish) */}
+                  <ArrowOutIcon className="mb-0.5 flex-shrink-0 transition-transform duration-200 ease-out group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </span>
+              </FancyLink>
+            </h3>
           </CardTitle>
           {/* Instruct screen readers to ignore processing previous job titles */}
           <CardDescription aria-hidden="true">
