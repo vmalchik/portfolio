@@ -1,7 +1,7 @@
 import GitHubIcon from "@/components/common/icons/github";
 import LinkedinIcon from "@/components/common/icons/linkedin";
+import ScrollIcon from "@/components/common/icons/scroll";
 import TieIcon from "@/components/common/icons/tie";
-import YoutubeIcon from "@/components/common/icons/youtube";
 import { cn } from "@/lib/utils/cn";
 import Link from "next/link";
 
@@ -21,17 +21,17 @@ const links: SocialLink[] = [
     label: "GitHub"
   },
   {
+    href: "https://patents.google.com/?q=(victor+malchikov)",
+    icon: ScrollIcon,
+    ariaLabel: "Victor's patents",
+    label: "Patents",
+    className: "scale-120"
+  },
+  {
     href: "https://www.linkedin.com/in/victor-malchikov/",
     icon: LinkedinIcon,
     ariaLabel: "Victor's LinkedIn profile",
     label: "LinkedIn"
-  },
-  {
-    href: "https://www.youtube.com/@victormalchikov/videos",
-    icon: YoutubeIcon,
-    ariaLabel: "Victor's Youtube channel",
-    label: "Youtube",
-    className: "scale-120"
   },
   {
     href: "/documents/resume.pdf",

@@ -68,14 +68,14 @@ export const aboutParagraphs = {
   ),
   personal: (
     <p>
-      In my free time, I&apos;m usually hiking, learning new tech,{" "}
+      In my free time, I&apos;m exploring trails around the Bay, baking{" "}
       <FancyLink
-        href="https://www.youtube.com/@victormalchikov/videos"
-        aria-label="Victor's YouTube channel"
+        href="https://www.allrecipes.com/recipe/6874/best-ever-muffins/"
+        aria-label="Muffin Recipe"
       >
-        exploring educational content creation
+        delicious muffins
       </FancyLink>
-      , or taking care of my two birds — Blue and Einstein.
+      , and enjoying quality time with family.
     </p>
   )
 };
